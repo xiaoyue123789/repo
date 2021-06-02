@@ -88,5 +88,81 @@
                 "YEARREPORTWEBSITEINFO": [ ]
             }
         }
+    },
+    "get_aml_report": {
+        "code": 200, 
+        "isSuccess": true, 
+        "msg": "请求成功", 
+        "resp": {
+            "data": {
+                "rules": {
+                    "highRisk": {
+                        "UBOAreForeignEnterprise": {
+                            "matching": 0
+                        }, 
+                        "UBOControlManyCompanies": {
+                            "matching": 0
+                        }, 
+                        "anti-moneyLaunderingBlacklist": {
+                            "matching": 0
+                        }, 
+                        "equityRightsComplex": {
+                            "matching": 0
+                        }, 
+                        "highRiskCountry2": {
+                            "matching": 0
+                        }, 
+                        "manyCompaniesAndRegionDispersion": {
+                            "matching": 0
+                        }, 
+                        "manyCompaniesSameStructure": {
+                            "matching": 0
+                        }, 
+                        "phoneAddressDupli": {
+                            "detail": {
+                                "contactPhoneNumber": "07733851609", 
+                                "registeredAddress": "", 
+                                "samePhoneNumber": 29, 
+                                "sameRegisteredAddress": 0
+                            }, 
+                            "matching": 1
+                        }, 
+                        "specialIndustryCustomers": {
+                            "matching": 0
+                        }, 
+                        "suspectedEmptyEnterprise": {
+                            "matching": 0
+                        }
+                    }, 
+                    "lowRisk": {
+                        "doubleAEnt": {
+                            "matching": 0
+                        }, 
+                        "partyGovernment": {
+                            "matching": 0
+                        }, 
+                        "stateOwnedEnt": {
+                            "matching": 0
+                        }
+                    },
+                    "refuse":{
+                        "businessOverdue": { "matching": 0 },
+                        "dishonestEnterprises": { "matching": 0},
+                        "highRiskCountry1": { "matching": 0 },
+                        "terroristOrganizations": { "matching": 0 }
+                    }
+                },
+                "scores":{
+                    "customerCharcteristics": [
+                        {"detail": "民营企业（除一人有限责任公司）", "name":"entNature", "score": 3 },
+                        {"detail": "10年以上", "name":"survivalTime", "score": 1}
+                    ],
+                    "industry": [
+                        {"detail": "金融行业", name: "industry", "score": 2}
+                    ],
+                    "region":[{"detail":"客户注册地为市内","name":"registeredAddress", "score": 1}]
+                }
+            }
+        }
     }
 }
