@@ -158,7 +158,7 @@
                         {"detail": "10年以上", "name":"survivalTime", "score": 1}
                     ],
                     "industry": [
-                        {"detail": "金融行业", name: "industry", "score": 2}
+                        {"detail": "金融行业", "name": "industry", "score": 2}
                     ],
                     "region":[{"detail":"客户注册地为市内","name":"registeredAddress", "score": 1}]
                 }
