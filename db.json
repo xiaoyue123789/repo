@@ -146,10 +146,10 @@
                         }
                     },
                     "refuse":{
-                        "businessOverdue": { "matching": 0 },
-                        "dishonestEnterprises": { "matching": 0},
-                        "highRiskCountry1": { "matching": 0 },
-                        "terroristOrganizations": { "matching": 0 }
+                        "businessOverdue": { "matching": 1, "detail": { "businessStatus": '忙碌', "daysPastOperatingPeriod":1 } },
+                        "dishonestEnterprises": { "matching": 1, "detail": [{ "dateIncluded":"2012-12-12", "inclusionReason": "绯闻绯闻","inclusionBodies":"的期望", "inclusionNumber":"2323" }] },
+                        "highRiskCountry1": { "matching": 1,"detail":[{"identificationType":"绯闻分", "identificationName": "得分", "identificationCountry": "中国"}] },
+                        "terroristOrganizations": { "matching": 1,"detail":[{"terroristType":"二二分", "terroristName":"绯闻分"}] }
                     }
                 },
                 "scores":{
